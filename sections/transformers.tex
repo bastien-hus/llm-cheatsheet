@@ -39,3 +39,8 @@ Any transformer using soft attention is \textbf{tight} (because its layers are c
 \subsection*{Expressiveness of Transformers}
 Let $p_{LN}$ be an n-gram language model. Then, there exists a transformer $\mathcal{T}$ with $L(p_{LN})=L(\mathcal{T})$.
 
+\subsection*{Sinusoidal Positional Encodings}
+For the $k$-th token and dimensionality $d$:
+$$\text{even:}\quad P(k, 2i) = \sin\left(\frac{k}{n^{2i/d}}\right)$$
+$$\text{odd:}\quad P(k, 2i+1) = \cos\left(\frac{k}{n^{2i/d}}\right)$$
+$n$ is user-defined$(=10000)$ and $i$ is the index.

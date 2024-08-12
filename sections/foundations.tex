@@ -22,7 +22,7 @@ As $\tau\rightarrow \infty$, becomes uniform and as $\tau\rightarrow 0$, becomes
 $\operatorname{softmax}(x)=\displaystyle\operatorname*{argmax}_{p\in\Delta^{n-1}} p^\top x - \tau \sum_{i=1}^{n} p_i \log p_i.$
 
 \subsection*{Representation-based Language Model}
-An embedding matrix $\mathbf{E}$ and an ecoding fct. $\text{enc}:\Sigma^*\rightarrow\mathbb{R}^d$ define a LNLM as $$p(y_t\mid y_{<t})=\operatorname{softmax}\big(\mathbf{E}\text{enc}(y_{<t})\big)_{y_t}.$$
+An embedding matrix $\mathbf{E}\in\mathbb{R}^{|\bar{\Sigma}|\times D}$ and an ecoding fct. $\text{enc}:\Sigma^*\rightarrow\mathbb{R}^d$ define a LNLM as $$p(y_t\mid y_{<t})=\operatorname{softmax}\big(\mathbf{E}\text{enc}(y_{<t})\big)_{y_t}.$$
 
 \subsection*{Tightness of Softmax RBLMs}
 If $sz(t)\leq \log t$ for all $t\geq N$ for some $N$, then the induced model is \textbf{tight}. Here, $s=\max_{y\in\Sigma} \|\text{e}(y)-\text{e}(\text{EOS})\|_2$ and $z(t)=\max_{\omega\in\Sigma^t}\|\text{enc}(\omega)\|_2$. In particular, if $\text{enc}$ is bounded, then the model is \textbf{tight}.

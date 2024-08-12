@@ -1,4 +1,4 @@
-\documentclass[12pt,landscape,a4paper]{article}
+\documentclass[11pt,landscape,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
@@ -7,7 +7,7 @@
 \usepackage[t1]{sourcesanspro}
 \usepackage{multicol}
 \usepackage{wrapfig}
-\usepackage[top=0mm,bottom=2mm,left=1mm,right=1mm]{geometry}
+\usepackage[top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
 \usepackage[framemethod=tikz]{mdframed}
 \usepackage{microtype}
 \usepackage{pdfpages}
@@ -15,7 +15,6 @@
 \usepackage{enumitem}
 \usepackage{tikz}
 \usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
-
 \let\bar\overline
 \definecolor{myblue}{cmyk}{1,.72,0,.38}
 \tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
@@ -24,7 +23,8 @@
 \pgfsetlayers{background,main}
 \everymath\expandafter{\the\everymath \color{myblue}}
 \everydisplay\expandafter{\the\everydisplay \color{myblue}}
-\renewcommand{\baselinestretch}{.8}
+
+\renewcommand{\baselinestretch}{.7}
 \pagestyle{empty}
 \global\mdfdefinestyle{header}{%
    linecolor=gray,linewidth=1pt,%
@@ -42,7 +42,6 @@
 \makeatother
 \setlength{\parindent}{0pt}
 
-
 \begin{document}
 \small
 \begin{multicols*}{4}
@@ -55,5 +54,6 @@
     \input{sections/parameter-efficient-ft.tex}
     \input{sections/knowledge.tex}
     \input{sections/additional.tex}
+    \input{sections/math-brushup.tex}
 \end{multicols*}
 \end{document}
